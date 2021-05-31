@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:cardElevation="8dp"
+       android:layout_marginLeft="4dp"
+       android:layout_marginRight="4dp"
+       android:layout_marginTop="4dp"
+       app:cardCornerRadius="4dp"
+       android:textAlignment="center">
+
+       <TextView
+           android:id="@+id/heading"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/heading"
+           android:gravity="center"
+           android:textStyle="bold"
+           android:textSize="26sp"
+           android:textColor="@color/white"
+           android:background="@color/purple_500"/>
+   </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        app:cardElevation="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/heading"
+        app:cardCornerRadius="4dp"
+        android:background="@color/white"
+        tools:ignore="NotSibling">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical">
+            
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/subheading"
+                   android:layout_marginStart="8dp"
+                   android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+                   android:textSize="20sp"
+                   android:textStyle="bold"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/scrolling"
+                   android:textSize="20sp"
+                   android:textStyle="normal"
+                   android:textColor="#000"
+                   android:lineSpacingExtra="@dimen/cardview_default_elevation"
+                   android:padding="16dp"/>
+
+           </LinearLayout>
+                
+            
+        </ScrollView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/add_commant"
+            app:backgroundTint="#0091EA"
+            app:cornerRadius="4dp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
